@@ -1,0 +1,222 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# 7. Package and Import\n## Contents\n1. Package\n2. Scope rule\n3. Chain Package statements\n4. 파일 시작 표기법\n5. 패키지 오브젝트\n6. 패키지 visibility\n7. import",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:55:03 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003e7. Package and Import\u003c/h1\u003e\n\u003ch2\u003eContents\u003c/h2\u003e\n\u003col\u003e\n  \u003cli\u003ePackage\u003c/li\u003e\n  \u003cli\u003eScope rule\u003c/li\u003e\n  \u003cli\u003eChain Package statements\u003c/li\u003e\n  \u003cli\u003e파일 시작 표기법\u003c/li\u003e\n  \u003cli\u003e패키지 오브젝트\u003c/li\u003e\n  \u003cli\u003e패키지 visibility\u003c/li\u003e\n  \u003cli\u003eimport\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490760895853_-1338848792",
+      "id": "20170329-131455_1333310057",
+      "dateCreated": "Mar 29, 2017 1:14:55 PM",
+      "dateStarted": "Mar 29, 2017 2:55:03 PM",
+      "dateFinished": "Mar 29, 2017 2:55:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "7.1 Package",
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:25:46 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490763470205_-1277428007",
+      "id": "20170329-135750_1991259012",
+      "dateCreated": "Mar 29, 2017 1:57:50 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:55:11 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490766911078_1787599915",
+      "id": "20170329-145511_367857109",
+      "dateCreated": "Mar 29, 2017 2:55:11 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:55:12 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490766912619_-1524333941",
+      "id": "20170329-145512_1949455499",
+      "dateCreated": "Mar 29, 2017 2:55:12 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "7.6 Package visibility",
+      "text": "%md\n* 자바에서 `public`, `private`, `protected`로 선언되지 않은 클래스 멤버는 클래스를 포함하고 있는 패키지에 가시성을 가진다.\n\n    ```java\n    class SomeClass {\n        private int somethingPrivate;       // hidden from outside      \n        public int somethingPublic;         // opened to everyone\n        protected int somethingProtected;   // can be accessed by itself and subclass \n    \n        int somethingDefault;               // can be accessed by parents package \n    }\n    ```\n* 스칼라에서는 한정자로 같은 효과를 낼 수 있다.\n\n    ```scala\n    package com.horstmann.impatient.people\n        \n    class Person {\n        private[people] def description \u003d \"something\"\n        private[impatient] def description2 \u003d \"something2\"\n    }\n    ```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:41:10 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e자바에서 \u003ccode\u003epublic\u003c/code\u003e, \u003ccode\u003eprivate\u003c/code\u003e, \u003ccode\u003eprotected\u003c/code\u003e로 선언되지 않은 클래스 멤버는 클래스를 포함하고 있는 패키지에 가시성을 가진다.\n    \u003cpre\u003e\u003ccode class\u003d\"java\"\u003eclass SomeClass {\n    private int somethingPrivate;       // hidden from outside      \n    public int somethingPublic;         // opened to everyone\n    protected int somethingProtected;   // can be accessed by itself and subclass \n\n    int somethingDefault;               // can be accessed by parents package \n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e스칼라에서는 한정자로 같은 효과를 낼 수 있다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003epackage com.horstmann.impatient.people\n\nclass Person {\n    private[people] def description \u003d \u0026quot;something\u0026quot;\n    private[impatient] def description2 \u003d \u0026quot;something2\u0026quot;\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490764933056_1836091432",
+      "id": "20170329-142213_1901236173",
+      "dateCreated": "Mar 29, 2017 2:22:13 PM",
+      "dateStarted": "Mar 29, 2017 2:41:10 PM",
+      "dateFinished": "Mar 29, 2017 2:41:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "7.7 Import",
+      "text": "%md\n* `import`는 긴 이름 대신 짧은 이름을 사용하도록 해준다.\n\n    ```scala\n    import java.awt.Color\n    \n    val red \u003d Color.RED\n    ```\n* 다음과 같이 패키지 내의 모든 멤버를 임포트할 수 있다.\n\n    ```scala\n    import java.awt._\n    \n    val red \u003d Color.RED\n    ```\n* 임포트문은 코드의 처음뿐만 아니라 어디든 올 수 있다.\n\n    ```scala\n    class SomeClass {\n        import java.awt._\n        val red \u003d Color.RED\n    }\n    ```\n* 선택자를 통해 몇 개의 패키지만 임포트할 수 있다.\n```scala\nimport java.awt.{Color, Font}\n```\n* 선택자를 통해 멤버 이름을 변경하거나 숨길 수 있다.\n\n    ```scala\n    // java의 HashMap을 JavaHashMap으로 이름 변경\n    import java.util.{HashMap \u003d\u003e JavaHashMap}   \n    import scala.collection.mutable.HashMap\n    \n    // java.util의 HashMap을 숨긴다. \n    import java.util.{HashMap \u003d\u003e _, _}\n    import scala.collection.mutable.HashMap\n    ```\n* 모든 스칼라 프로그램은 암묵적으로 다음 3개를 임포트한다.\n    ```scala\n    import java.lang._\n    import scala._          // 앞선 임포트를 덮어 쓴다 ex) scala.StringBuilder가 java.lang.StringBuilder를 덮어쓴다\n    import Predef._         // 유용한 스칼라 함수를 포함\n    ```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:54:01 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003eimport\u003c/code\u003e는 긴 이름 대신 짧은 이름을 사용하도록 해준다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eimport java.awt.Color\n\nval red \u003d Color.RED\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e다음과 같이 패키지 내의 모든 멤버를 임포트할 수 있다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eimport java.awt._\n\nval red \u003d Color.RED\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e임포트문은 코드의 처음뿐만 아니라 어디든 올 수 있다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass SomeClass {\n    import java.awt._\n    val red \u003d Color.RED\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e선택자를 통해 몇 개의 패키지만 임포트할 수 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eimport java.awt.{Color, Font}\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e선택자를 통해 멤버 이름을 변경하거나 숨길 수 있다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003e// java의 HashMap을 JavaHashMap으로 이름 변경\nimport java.util.{HashMap \u003d\u0026gt; JavaHashMap}   \nimport scala.collection.mutable.HashMap\n\n// java.util의 HashMap을 숨긴다. \nimport java.util.{HashMap \u003d\u0026gt; _, _}\nimport scala.collection.mutable.HashMap\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e모든 스칼라 프로그램은 암묵적으로 다음 3개를 임포트한다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eimport java.lang._\nimport scala._          // 앞선 임포트를 덮어 쓴다 ex) scala.StringBuilder가 java.lang.StringBuilder를 덮어쓴다\nimport Predef._         // 유용한 스칼라 함수를 포함\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490764963757_-1917351916",
+      "id": "20170329-142243_1553393262",
+      "dateCreated": "Mar 29, 2017 2:22:43 PM",
+      "dateStarted": "Mar 29, 2017 2:54:01 PM",
+      "dateFinished": "Mar 29, 2017 2:54:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 2:22:45 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490764965279_1373051326",
+      "id": "20170329-142245_2138223526",
+      "dateCreated": "Mar 29, 2017 2:22:45 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala/Scala for the Impatient Chapter 7",
+  "id": "2CE79HP7U",
+  "angularObjects": {
+    "2CDV3C51V:shared_process": [],
+    "2CEZYM8CH:shared_process": [],
+    "2CBXMD1K8:shared_process": [],
+    "2CC3ZFPQZ:shared_process": [],
+    "2CEK66QRE:shared_process": [],
+    "2CCS7GDUT:shared_process": [],
+    "2CECM2261:shared_process": [],
+    "2CE9811CW:shared_process": [],
+    "2CBDJU1VS:shared_process": [],
+    "2CBBCX9GY:shared_process": [],
+    "2CCT8F56W:shared_process": [],
+    "2CE43Y351:shared_process": [],
+    "2CDK9A91X:shared_process": [],
+    "2CF85MNAE:shared_process": [],
+    "2CBBRV68Y:shared_process": [],
+    "2CBRCATP3:shared_process": [],
+    "2CERNGWGZ:shared_process": [],
+    "2CC288T2P:shared_process": [],
+    "2CD55NX64:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

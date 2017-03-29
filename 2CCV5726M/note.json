@@ -1,0 +1,697 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# 2. 제어구조와 함수\n## key\n* `if`문은 값을 가짐 \n* `{}` 블록은 값을 가짐\n* 스칼라의 `for loop`은 자바의 `enhanced for loop`과 유사\n* 세미콜론은 생략가능\n* `void` 타입은 `Unit` 타입\n* 함수 정의에 `\u003d`가 없음\n* 예외는 자바나 C++처럼 동작하지만 `catch`에 **패턴매칭** 문법 사용\n* 체크 예외가 없음",
+      "user": "anonymous",
+      "dateUpdated": "Mar 28, 2017 1:43:40 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003e2. 제어구조와 함수\u003c/h1\u003e\n\u003ch2\u003ekey\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003eif\u003c/code\u003e문은 값을 가짐\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003e{}\u003c/code\u003e 블록은 값을 가짐\u003c/li\u003e\n  \u003cli\u003e스칼라의 \u003ccode\u003efor loop\u003c/code\u003e은 자바의 \u003ccode\u003eenhanced for loop\u003c/code\u003e과 유사\u003c/li\u003e\n  \u003cli\u003e세미콜론은 생략가능\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003evoid\u003c/code\u003e 타입은 \u003ccode\u003eUnit\u003c/code\u003e 타입\u003c/li\u003e\n  \u003cli\u003e함수 정의에 \u003ccode\u003e\u003d\u003c/code\u003e가 없음\u003c/li\u003e\n  \u003cli\u003e예외는 자바나 C++처럼 동작하지만 \u003ccode\u003ecatch\u003c/code\u003e에 \u003cstrong\u003e패턴매칭\u003c/strong\u003e 문법 사용\u003c/li\u003e\n  \u003cli\u003e체크 예외가 없음\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676048963_1853277139",
+      "id": "20170328-134048_1150430907",
+      "dateCreated": "Mar 28, 2017 1:40:48 PM",
+      "dateStarted": "Mar 28, 2017 1:43:40 PM",
+      "dateFinished": "Mar 28, 2017 1:43:40 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.1 조건식",
+      "text": "%md\n```scala\nif (true) 1 else -1     // if문은 마지막 값을 반환\n\nif (true) { // ... ; 1 }\nelse { // ... ; -1 }\n\n// val을 초기화할 수 있다\nval x \u003d if (1 \u003e 0) 1 else -1        \n/* \n * 자바나 C++은 조건에 따른 상수 초기화를 못함\n * final int x;\n * if (1 \u003e 0) x \u003d 1 else x \u003d -1     // error!\n */\n\nif (true) \"string\" else 0       // 분기 결과값이 서로 다르면 공통 슈퍼타입을 사용(여기서는 Any 타입)\n\nif (true) 1                 // `if (true) 1 else ()`과 동일 \nif (true) 1 else ()         // `()`은 `Unit`타입(자바의 `void`)을 반환\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 28, 2017 2:10:23 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eif (true) 1 else -1     // if문은 마지막 값을 반환\n\nif (true) { // ... ; 1 }\nelse { // ... ; -1 }\n\n// val을 초기화할 수 있다\nval x \u003d if (1 \u0026gt; 0) 1 else -1        \n/* \n * 자바나 C++은 조건에 따른 상수 초기화를 못함\n * final int x;\n * if (1 \u0026gt; 0) x \u003d 1 else x \u003d -1     // error!\n */\n\nif (true) \u0026quot;string\u0026quot; else 0       // 분기 결과값이 서로 다르면 공통 슈퍼타입을 사용(여기서는 Any 타입)\n\nif (true) 1                 // `if (true) 1 else ()`과 동일 \nif (true) 1 else ()         // `()`은 `Unit`타입(자바의 `void`)을 반환\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676220801_1567052961",
+      "id": "20170328-134340_1698229302",
+      "dateCreated": "Mar 28, 2017 1:43:40 PM",
+      "dateStarted": "Mar 28, 2017 2:10:23 PM",
+      "dateFinished": "Mar 28, 2017 2:10:23 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n```\n스칼라는 `switch` 문이 없지만, 훨씬 강력한 패턴 매칭 메커니즘을 갖고 있다.(14장에서 다룸)\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 28, 2017 2:10:48 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cpre\u003e\u003ccode\u003e스칼라는 `switch` 문이 없지만, 훨씬 강력한 패턴 매칭 메커니즘을 갖고 있다.(14장에서 다룸)\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676320743_-2058112472",
+      "id": "20170328-134520_616419828",
+      "dateCreated": "Mar 28, 2017 1:45:20 PM",
+      "dateStarted": "Mar 28, 2017 2:10:48 PM",
+      "dateFinished": "Mar 28, 2017 2:10:48 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.3 블록식과 할당(assignment)",
+      "text": "%md\n* 스칼라에서 `{}`블록은 일련의 식을 포함하고, 결과도 식, 블록의 값은 마지막 식의 값이 됨\n* `val`을 초기화할 때 여러 문장이 필요한 경우 유용\n```scala\nval distance \u003d {\n  val dx \u003d x - x0\n  val dy \u003d y - y0\n  sqrt(dx * dx + dy * dy)\n}\n```\n* 스칼라에서 할당(`\u003d`) 연산은 값이 없다. (`Unit` 타입)\n```scala\nx \u003d y \u003d 1\n// y \u003d 1\n// x \u003d Unit\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 28, 2017 2:05:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e스칼라에서 \u003ccode\u003e{}\u003c/code\u003e블록은 일련의 식을 포함하고, 결과도 식, 블록의 값은 마지막 식의 값이 됨\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003ccode\u003eval\u003c/code\u003e을 초기화할 때 여러 문장이 필요한 경우 유용\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eval distance \u003d {\n  val dx \u003d x - x0\n  val dy \u003d y - y0\n  sqrt(dx * dx + dy * dy)\n}\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e스칼라에서 할당(\u003ccode\u003e\u003d\u003c/code\u003e) 연산은 값이 없다. (\u003ccode\u003eUnit\u003c/code\u003e 타입)\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003ex \u003d y \u003d 1\n// y \u003d 1\n// x \u003d Unit\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676321276_2042556629",
+      "id": "20170328-134521_1122963800",
+      "dateCreated": "Mar 28, 2017 1:45:21 PM",
+      "dateStarted": "Mar 28, 2017 2:05:26 PM",
+      "dateFinished": "Mar 28, 2017 2:05:26 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.4 입력과 출력",
+      "text": "print(\"Hello \")\nprintln(\"world\")\n\nprintf(\"Hello %s\", \"world2\")\n\n// 입력은 readLine, readInt, readDouble.... 메소드 사용",
+      "user": "anonymous",
+      "dateUpdated": "Mar 28, 2017 2:14:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hello world\nHello world2"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676321776_1850182179",
+      "id": "20170328-134521_204097901",
+      "dateCreated": "Mar 28, 2017 1:45:21 PM",
+      "dateStarted": "Mar 28, 2017 2:14:26 PM",
+      "dateFinished": "Mar 28, 2017 2:14:27 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.5 루프",
+      "text": "%md\n* 스칼라는 자바와 C++과 동일한 `while`, `do` 루프문을 갖고 있다.\n```scala\nwhile (n \u003e 0) {\n  r \u003d r * n\n  n -\u003d 1\n}\n```\n* 스칼라는 `for (init; test; update)`에 상응하는 것이 없다. `while`로 대체하거나 `for (var \u003c- expr)`형태로 쓸 수 있다.\n```scala\nfor (i \u003c- 1 to n)   // 1 ~ n (n을 포함)\n  r \u003d r * i\n```\n\n* `n-1` 까지 순회하려면 `until` 을 사용\n```scala\nfor (i \u003c- 0 until n)\n  r \u003d r * i\n```\n\n* 인덱스 없이 스트링을 직접 루프 돌수도 있다.\n```scala\nfor (ch \u003c- \"Hello\")\n  println(ch)\n```\n* 스칼라는 루프에서 빠져나올 `break`, `continue`문이 없다.\n    * 이진 제어 변수 사용(?)\n    * 중첩 함수 사용해서 중간에 리턴\n    * `Breaks` 오브젝트의 `break` 메소드 사용",
+      "user": "anonymous",
+      "dateUpdated": "Mar 28, 2017 2:27:24 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003e스칼라는 자바와 C++과 동일한 \u003ccode\u003ewhile\u003c/code\u003e, \u003ccode\u003edo\u003c/code\u003e 루프문을 갖고 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003ewhile (n \u0026gt; 0) {\n  r \u003d r * n\n  n -\u003d 1\n}\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e스칼라는 \u003ccode\u003efor (init; test; update)\u003c/code\u003e에 상응하는 것이 없다. \u003ccode\u003ewhile\u003c/code\u003e로 대체하거나 \u003ccode\u003efor (var \u0026lt;- expr)\u003c/code\u003e형태로 쓸 수 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003efor (i \u0026lt;- 1 to n)   // 1 ~ n (n을 포함)\n  r \u003d r * i\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003ccode\u003en-1\u003c/code\u003e 까지 순회하려면 \u003ccode\u003euntil\u003c/code\u003e 을 사용\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003efor (i \u0026lt;- 0 until n)\n  r \u003d r * i\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e인덱스 없이 스트링을 직접 루프 돌수도 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003efor (ch \u0026lt;- \u0026quot;Hello\u0026quot;)\n  println(ch)\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e스칼라는 루프에서 빠져나올 \u003ccode\u003ebreak\u003c/code\u003e, \u003ccode\u003econtinue\u003c/code\u003e문이 없다.\n    \u003cul\u003e\n      \u003cli\u003e이진 제어 변수 사용(?)\u003c/li\u003e\n      \u003cli\u003e중첩 함수 사용해서 중간에 리턴\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003eBreaks\u003c/code\u003e 오브젝트의 \u003ccode\u003ebreak\u003c/code\u003e 메소드 사용\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676322128_1616254848",
+      "id": "20170328-134522_2049727465",
+      "dateCreated": "Mar 28, 2017 1:45:22 PM",
+      "dateStarted": "Mar 28, 2017 2:27:24 PM",
+      "dateFinished": "Mar 28, 2017 2:27:24 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.6 Advanced for loop \u0026 for comprehension",
+      "text": "%md\n1. for 루프는 `var \u003c- expr` 형태의 **Generator**를 가질 수 있다\n2. **Generator**는 이진 조건 **가드**를 가질 수 있다.\n3. for 루프의 바디를 `yield`로 시작하면 for 결과 값을 `colletion` 타입으로 생성한다. ( **for comprehension** )\n4. `collection` 타입은 첫 번째 `Generator` 타입으로 생성된다.\n5. `Generator`가 너무 긴 경우 중괄호에 여러 줄로 넣을 수도 있다.\n```scala\nfor { i \u003c- 1 to 3\n  j \u003c 1 to 3\n  if i \u003d\u003d j }\n  print((10 * i + j) + \" \")\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:17:30 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003col\u003e\n  \u003cli\u003efor 루프는 \u003ccode\u003evar \u0026lt;- expr\u003c/code\u003e 형태의 \u003cstrong\u003eGenerator\u003c/strong\u003e를 가질 수 있다\u003c/li\u003e\n  \u003cli\u003e\u003cstrong\u003eGenerator\u003c/strong\u003e는 이진 조건 \u003cstrong\u003e가드\u003c/strong\u003e를 가질 수 있다.\u003c/li\u003e\n  \u003cli\u003efor 루프의 바디를 \u003ccode\u003eyield\u003c/code\u003e로 시작하면 for 결과 값을 \u003ccode\u003ecolletion\u003c/code\u003e 타입으로 생성한다. ( \u003cstrong\u003efor comprehension\u003c/strong\u003e )\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003ecollection\u003c/code\u003e 타입은 첫 번째 \u003ccode\u003eGenerator\u003c/code\u003e 타입으로 생성된다.\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003ccode\u003eGenerator\u003c/code\u003e가 너무 긴 경우 중괄호에 여러 줄로 넣을 수도 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003efor { i \u0026lt;- 1 to 3\n  j \u0026lt; 1 to 3\n  if i \u003d\u003d j }\n  print((10 * i + j) + \u0026quot; \u0026quot;)\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490676322426_-1412888567",
+      "id": "20170328-134522_1354089156",
+      "dateCreated": "Mar 28, 2017 1:45:22 PM",
+      "dateStarted": "Mar 29, 2017 10:17:30 AM",
+      "dateFinished": "Mar 29, 2017 10:17:30 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "",
+      "text": "for (i \u003c- 1 to 3; j \u003c- 1 to 3)\n  print((10 * i + j) + \" \")\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:05:41 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala",
+        "title": false,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "11 12 13 21 22 23 31 32 33 "
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490678913477_549995744",
+      "id": "20170328-142833_482217157",
+      "dateCreated": "Mar 28, 2017 2:28:33 PM",
+      "dateStarted": "Mar 29, 2017 10:05:15 AM",
+      "dateFinished": "Mar 29, 2017 10:05:16 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "for (i \u003c- 1 to 3; j \u003c- 1 to 3 if i \u003d\u003d j)\n  print((10 * i + j) + \" \")\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:07:26 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "11 22 33 "
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490678913678_277208774",
+      "id": "20170328-142833_1871808967",
+      "dateCreated": "Mar 28, 2017 2:28:33 PM",
+      "dateStarted": "Mar 29, 2017 10:07:26 AM",
+      "dateFinished": "Mar 29, 2017 10:07:27 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "for (i \u003c- 1 to 3; j \u003c- 1 to 3 if i \u003d\u003d j)\n    yield i.toChar + j.toChar",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:09:48 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nres65: scala.collection.immutable.IndexedSeq[Int] \u003d Vector(2, 4, 6)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490749523345_1481051314",
+      "id": "20170329-100523_1803720934",
+      "dateCreated": "Mar 29, 2017 10:05:23 AM",
+      "dateStarted": "Mar 29, 2017 10:09:45 AM",
+      "dateFinished": "Mar 29, 2017 10:09:46 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "for (i \u003c- \"ABC\"; j \u003c- 0 to 1)\n    yield (i + j).toChar\n    \nfor (i \u003c- 0 to 1; j \u003c- \"ABC\")\n    yield (i + j).toChar",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:14:59 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nres74: String \u003d ABBCCD\n\nres75: scala.collection.immutable.IndexedSeq[Char] \u003d Vector(A, B, C, B, C, D)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490749761411_68959910",
+      "id": "20170329-100921_1295794118",
+      "dateCreated": "Mar 29, 2017 10:09:21 AM",
+      "dateStarted": "Mar 29, 2017 10:14:59 AM",
+      "dateFinished": "Mar 29, 2017 10:15:00 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.7 함수",
+      "text": "%md\n* 스칼라는 메소드 뿐 아니라 함수도 제공\n```scala\ndef abs(x: Double) \u003d if (x \u003e\u003d 0) x else -x\n```\n* 모든 인자에 타입을 지정해야 함\n* 리턴 타입을 반드시 지정할 필요는 없다.(`\u003d` 심볼 오른쪽 식에서 타입 추론을 함)\n* **recursive function**인 경우는 지정해야함\n```scala\ndef factorial(n: Int): Int \u003d if (n \u003c\u003d 0) 1 else n * factorial(n - 1)    // 컴파일러가 n * factorial(n-1)의 타입을 추론할 수 없다.\n```\n* 여러 식이 필요한 경우 블록(`{}`) 사용, 마지막 값이 리턴 값\n* 값을 반환하는데 `return`을 사용하지 않고, 함수를 빠져나오는 `break`용도로만 사용",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:26:07 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003e스칼라는 메소드 뿐 아니라 함수도 제공\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003edef abs(x: Double) \u003d if (x \u0026gt;\u003d 0) x else -x\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e모든 인자에 타입을 지정해야 함\u003c/li\u003e\n  \u003cli\u003e리턴 타입을 반드시 지정할 필요는 없다.(\u003ccode\u003e\u003d\u003c/code\u003e 심볼 오른쪽 식에서 타입 추론을 함)\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003cstrong\u003erecursive function\u003c/strong\u003e인 경우는 지정해야함\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003edef factorial(n: Int): Int \u003d if (n \u0026lt;\u003d 0) 1 else n * factorial(n - 1)    // 컴파일러가 n * factorial(n-1)의 타입을 추론할 수 없다.\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e여러 식이 필요한 경우 블록(\u003ccode\u003e{}\u003c/code\u003e) 사용, 마지막 값이 리턴 값\u003c/li\u003e\n  \u003cli\u003e값을 반환하는데 \u003ccode\u003ereturn\u003c/code\u003e을 사용하지 않고, 함수를 빠져나오는 \u003ccode\u003ebreak\u003c/code\u003e용도로만 사용\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490678913837_312990422",
+      "id": "20170328-142833_1695800957",
+      "dateCreated": "Mar 28, 2017 2:28:33 PM",
+      "dateStarted": "Mar 29, 2017 10:26:07 AM",
+      "dateFinished": "Mar 29, 2017 10:26:07 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.8 parameter default value \u0026 named parameter",
+      "text": "%md\n* 명시적으로 값을 지정하지 않은 경우 기본 값을 줄 수 있다.\n* 인자를 넘길 때 인자이름을 지정할 수 있다.\n```scala\ndef decorate(str: String, left: String \u003d \"\u003c\u003c\u003c\", right: String \u003d \"\u003e\u003e\u003e\") \u003d left + str + right\ndecorate(\"gdid\")                            // \u003c\u003c\u003cgdid\u003e\u003e\u003e\ndecorate(\"gdid\", \"#\", \":\")                  // #gdid:\ndecorate(\"gdid\", left \u003d \"#\", right \u003d \":\")   // #gdid:\n```\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:31:06 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e명시적으로 값을 지정하지 않은 경우 기본 값을 줄 수 있다.\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e인자를 넘길 때 인자이름을 지정할 수 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003edef decorate(str: String, left: String \u003d \u0026quot;\u0026lt;\u0026lt;\u0026lt;\u0026quot;, right: String \u003d \u0026quot;\u0026gt;\u0026gt;\u0026gt;\u0026quot;) \u003d left + str + right\ndecorate(\u0026quot;gdid\u0026quot;)                            // \u0026lt;\u0026lt;\u0026lt;gdid\u0026gt;\u0026gt;\u0026gt;\ndecorate(\u0026quot;gdid\u0026quot;, \u0026quot;#\u0026quot;, \u0026quot;:\u0026quot;)                  // #gdid:\ndecorate(\u0026quot;gdid\u0026quot;, left \u003d \u0026quot;#\u0026quot;, right \u003d \u0026quot;:\u0026quot;)   // #gdid:\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490678914437_180636800",
+      "id": "20170328-142834_489521791",
+      "dateCreated": "Mar 28, 2017 2:28:34 PM",
+      "dateStarted": "Mar 29, 2017 10:31:06 AM",
+      "dateFinished": "Mar 29, 2017 10:31:06 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.9 가변 인자",
+      "text": "%md\n* 아래와 같이 가변 인자를 사용할 수 있다.\n```scala\ndef sum(args: Int*) \u003d {\n  var result \u003d 0\n  for (arg \u003c args) result +\u003d arg\n  result\n}\nsum(1,2,4,5,6,7)\n```\n\n* 위의 가변 인자는 실제로는 `Seq` 타입(13장에서 다룸)의 인자 하나(`Tuple`이라고 생각하면 될듯..)\n* 따라서 값의 시퀀스를 바로 전달할 수는 없고, `_*`로 인자 시퀀스로 변환해야함\n```scala\nsum(1 to 5) // error\nsum(1 to 5: _*)     // OK\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:38:34 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003e\n  \u003cp\u003e아래와 같이 가변 인자를 사용할 수 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003edef sum(args: Int*) \u003d {\n  var result \u003d 0\n  for (arg \u0026lt; args) result +\u003d arg\n  result\n}\nsum(1,2,4,5,6,7)\n\u003c/code\u003e\u003c/pre\u003e\u003c/p\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e위의 가변 인자는 실제로는 \u003ccode\u003eSeq\u003c/code\u003e 타입(13장에서 다룸)의 인자 하나(\u003ccode\u003eTuple\u003c/code\u003e이라고 생각하면 될듯..)\u003c/p\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e따라서 값의 시퀀스를 바로 전달할 수는 없고, \u003ccode\u003e_*\u003c/code\u003e로 인자 시퀀스로 변환해야함\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003esum(1 to 5) // error\nsum(1 to 5: _*)     // OK\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490751018276_2122193458",
+      "id": "20170329-103018_1817777042",
+      "dateCreated": "Mar 29, 2017 10:30:18 AM",
+      "dateStarted": "Mar 29, 2017 10:38:34 AM",
+      "dateFinished": "Mar 29, 2017 10:38:34 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.10 프로시저",
+      "text": "%md\n* 값을 리턴하지 않고, 사이드 이펙트만 발생시키는 함수\n* 리턴 타입은 `Unit`\n* `\u003d` 심볼 없이 중괄호만 사용\n* ex) printf, println",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:51:24 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490751257028_-1630729391",
+      "id": "20170329-103417_685664553",
+      "dateCreated": "Mar 29, 2017 10:34:17 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.11 Lazy value",
+      "text": "%md\n* `val`이 `lazy`로 선언되면 처음 접근하기 전까지 초기화가 연기된다\n```scala\nlazy val words \u003d scala.io.Source.fromFile(\"textfile.txt\").mkString  // 이 시점에서 파일이 열리지 않고, words를 사용하는 시점에 열림\n```\n* `lazy` value는 `val`과 `def`의 중간 개념으로 생각할 수 있다.\n```scala\nval words \u003d scala.io.Source.fromFile(\"textfile.txt\").mkString  // 초기화 후에는 파일을 열지 않음\nlazy val words \u003d scala.io.Source.fromFile(\"textfile.txt\").mkString  // words를 사용하는 시점에 초기화하고 이후에는 열지 않음\ndef val words \u003d scala.io.Source.fromFile(\"textfile.txt\").mkString  // words를 사용할 때마다 파일을 연다\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:45:14 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003ccode\u003eval\u003c/code\u003e이 \u003ccode\u003elazy\u003c/code\u003e로 선언되면 처음 접근하기 전까지 초기화가 연기된다\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003elazy val words \u003d scala.io.Source.fromFile(\u0026quot;textfile.txt\u0026quot;).mkString  // 이 시점에서 파일이 열리지 않고, words를 사용하는 시점에 열림\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003ccode\u003elazy\u003c/code\u003e value는 \u003ccode\u003eval\u003c/code\u003e과 \u003ccode\u003edef\u003c/code\u003e의 중간 개념으로 생각할 수 있다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eval words \u003d scala.io.Source.fromFile(\u0026quot;textfile.txt\u0026quot;).mkString  // 초기화 후에는 파일을 열지 않음\nlazy val words \u003d scala.io.Source.fromFile(\u0026quot;textfile.txt\u0026quot;).mkString  // words를 사용하는 시점에 초기화하고 이후에는 열지 않음\ndef val words \u003d scala.io.Source.fromFile(\u0026quot;textfile.txt\u0026quot;).mkString  // words를 사용할 때마다 파일을 연다\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490751591838_-941970852",
+      "id": "20170329-103951_1711054146",
+      "dateCreated": "Mar 29, 2017 10:39:51 AM",
+      "dateStarted": "Mar 29, 2017 10:45:15 AM",
+      "dateFinished": "Mar 29, 2017 10:45:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "2.12 Exception",
+      "text": "%md\n* 자바와 C++과 동일\n```scala\ntry {\n  ...\n} catch {\n  ...\n} finally {\n  ...\n}\n```\n* 단, **Checked Exception**이 없으므로, 클래스나 메소드에 어떤 **Exception**을 던지는 지 시그니처 추가가 불필요\n```java\npublic String doSomething() throws IOException, IlligalArgumentException ...... // 불필요\n```",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:50:06 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003e자바와 C++과 동일\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003etry {\n  ...\n} catch {\n  ...\n} finally {\n  ...\n}\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e단, \u003cstrong\u003eChecked Exception\u003c/strong\u003e이 없으므로, 클래스나 메소드에 어떤 \u003cstrong\u003eException\u003c/strong\u003e을 던지는 지 시그니처 추가가 불필요\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"java\"\u003epublic String doSomething() throws IOException, IlligalArgumentException ...... // 불필요\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490751592099_-1251693717",
+      "id": "20170329-103952_1048773618",
+      "dateCreated": "Mar 29, 2017 10:39:52 AM",
+      "dateStarted": "Mar 29, 2017 10:50:06 AM",
+      "dateFinished": "Mar 29, 2017 10:50:06 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 10:39:53 AM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490751593852_-240958356",
+      "id": "20170329-103953_441693278",
+      "dateCreated": "Mar 29, 2017 10:39:53 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala/Scala for the Impatient Chapter 2",
+  "id": "2CCV5726M",
+  "angularObjects": {
+    "2CDV3C51V:shared_process": [],
+    "2CEZYM8CH:shared_process": [],
+    "2CBXMD1K8:shared_process": [],
+    "2CC3ZFPQZ:shared_process": [],
+    "2CEK66QRE:shared_process": [],
+    "2CCS7GDUT:shared_process": [],
+    "2CECM2261:shared_process": [],
+    "2CE9811CW:shared_process": [],
+    "2CBDJU1VS:shared_process": [],
+    "2CBBCX9GY:shared_process": [],
+    "2CCT8F56W:shared_process": [],
+    "2CE43Y351:shared_process": [],
+    "2CDK9A91X:shared_process": [],
+    "2CF85MNAE:shared_process": [],
+    "2CBBRV68Y:shared_process": [],
+    "2CBRCATP3:shared_process": [],
+    "2CERNGWGZ:shared_process": [],
+    "2CC288T2P:shared_process": [],
+    "2CD55NX64:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

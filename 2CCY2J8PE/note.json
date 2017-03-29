@@ -1,0 +1,92 @@
+{
+  "paragraphs": [
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490767761811_84527784",
+      "id": "20170329-150921_93201174",
+      "dateCreated": "Mar 29, 2017 3:09:21 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "3.1 Fixed-length Array",
+      "text": "\nval nums \u003d new Array[Int](10)\n//val a \u003d new Array[String](10)\n//val s \u003d Array(\"Hello\", \"World\")\n//s(0) \u003d \"Good Bye\"",
+      "user": "anonymous",
+      "dateUpdated": "Mar 29, 2017 3:14:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "tableHide": false,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1490767871470_-245653527",
+      "id": "20170329-151111_927428376",
+      "dateCreated": "Mar 29, 2017 3:11:11 PM",
+      "dateStarted": "Mar 29, 2017 3:14:19 PM",
+      "dateFinished": "Mar 29, 2017 3:14:22 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490767957445_1067063748",
+      "id": "20170329-151237_297056102",
+      "dateCreated": "Mar 29, 2017 3:12:37 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala/Scala for the Impatient Chapter 3 Array",
+  "id": "2CCY2J8PE",
+  "angularObjects": {
+    "2CDV3C51V:shared_process": [],
+    "2CEZYM8CH:shared_process": [],
+    "2CBXMD1K8:shared_process": [],
+    "2CC3ZFPQZ:shared_process": [],
+    "2CEK66QRE:shared_process": [],
+    "2CCS7GDUT:shared_process": [],
+    "2CECM2261:shared_process": [],
+    "2CE9811CW:shared_process": [],
+    "2CBDJU1VS:shared_process": [],
+    "2CBBCX9GY:shared_process": [],
+    "2CCT8F56W:shared_process": [],
+    "2CE43Y351:shared_process": [],
+    "2CDK9A91X:shared_process": [],
+    "2CF85MNAE:shared_process": [],
+    "2CBBRV68Y:shared_process": [],
+    "2CBRCATP3:shared_process": [],
+    "2CERNGWGZ:shared_process": [],
+    "2CC288T2P:shared_process": [],
+    "2CD55NX64:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

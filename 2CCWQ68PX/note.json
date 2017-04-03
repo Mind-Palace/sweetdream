@@ -1,0 +1,386 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# 4. Map \u0026 Tuple\n## Key point\n* 스칼라는 Map 생성, 쿼리, 방문을 위한 좋은 문법이 있다.\n* `Immutable`, `mutable` 선택이 필요\n* 기본적으로 `HashMap`\n* 자바 \u003c-\u003e 스칼라 맵 변환이 쉽다",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 11:11:23 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003e4. Map \u0026amp; Tuple\u003c/h1\u003e\n\u003ch2\u003eKey point\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003e스칼라는 Map 생성, 쿼리, 방문을 위한 좋은 문법이 있다.\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eImmutable\u003c/code\u003e, \u003ccode\u003emutable\u003c/code\u003e 선택이 필요\u003c/li\u003e\n  \u003cli\u003e기본적으로 \u003ccode\u003eHashMap\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003e자바 \u0026lt;-\u0026gt; 스칼라 맵 변환이 쉽다\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490926202782_176180491",
+      "id": "20170331-111002_535573570",
+      "dateCreated": "Mar 31, 2017 11:10:02 AM",
+      "dateStarted": "Mar 31, 2017 11:11:23 AM",
+      "dateFinished": "Mar 31, 2017 11:11:23 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "4.1 Create Map",
+      "text": "val immutableMap \u003d Map(\"Key1\" -\u003e \"Value1\", \"Key2\" -\u003e \"Value2\") \nval immutableMap2 \u003d Map((\"Key1\", \"Value1\"), (\"Key2\", \"Value2\")) \n\nval mutableMap \u003d collection.mutable.Map(\"Key1\" -\u003e \"Value1\", \"Key2\" -\u003e \"Value2\")\n\nval emptyMap \u003d new collection.mutable.HashMap[String, String]\n\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 11:15:13 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nimmutableMap: scala.collection.immutable.Map[String,String] \u003d Map(Key1 -\u003e Value1, Key2 -\u003e Value2)\n\nimmutableMap2: scala.collection.immutable.Map[String,String] \u003d Map(Key1 -\u003e Value1, Key2 -\u003e Value2)\n\nmutableMap: scala.collection.mutable.Map[String,String] \u003d Map(Key2 -\u003e Value2, Key1 -\u003e Value1)\n\nemptyMap: scala.collection.mutable.HashMap[String,String] \u003d Map()\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490926214977_-1476316035",
+      "id": "20170331-111014_408939482",
+      "dateCreated": "Mar 31, 2017 11:10:14 AM",
+      "dateStarted": "Mar 31, 2017 11:15:06 AM",
+      "dateFinished": "Mar 31, 2017 11:15:08 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "4.2 Access Map",
+      "text": "val value \u003d immutableMap(\"Key1\")\n\nval value2 \u003d if (immutableMap.contains(\"Key2\")) immutableMap(\"Key2\") else 0\n\nval value3 \u003d immutableMap.getOrElse(\"Key2\", 0)",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 11:24:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nvalue: String \u003d Value1\n\nvalue2: Any \u003d Value2\n\nvalue3: Any \u003d Value2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490926468267_-242073857",
+      "id": "20170331-111428_1274965355",
+      "dateCreated": "Mar 31, 2017 11:14:28 AM",
+      "dateStarted": "Mar 31, 2017 11:24:19 AM",
+      "dateFinished": "Mar 31, 2017 11:24:20 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n`map.get(key)` 호출은 `Some` 또는 `Option`(None) 오브젝트를 리턴 (14장)",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 11:26:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003e\u003ccode\u003emap.get(key)\u003c/code\u003e 호출은 \u003ccode\u003eSome\u003c/code\u003e 또는 \u003ccode\u003eOption\u003c/code\u003e(None) 오브젝트를 리턴 (14장)\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490927059475_-1704245560",
+      "id": "20170331-112419_76638430",
+      "dateCreated": "Mar 31, 2017 11:24:19 AM",
+      "dateStarted": "Mar 31, 2017 11:26:21 AM",
+      "dateFinished": "Mar 31, 2017 11:26:21 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "4.3 Update Value",
+      "text": "mutableMap(\"Key1\") \u003d \"New Value1\"\nmutableMap(\"Key3\") \u003d \"Value3\"       // adding\n\nmutableMap +\u003d (\"Key4\" -\u003e \"Value4\", \"Key5\" -\u003e \"Value5\")      // adding \n\nmutableMap -\u003d \"Key2\"    // deleting\n\nimmutableMap\nval updatedImmutableMap \u003d immutableMap + (\"Key2\" -\u003e \"new Value2\")\n\n",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 1:13:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nres122: mutableMap.type \u003d Map(Key3 -\u003e Value3, Key5 -\u003e Value5, Key1 -\u003e New Value1, Key4 -\u003e Value4)\n\nres123: mutableMap.type \u003d Map(Key3 -\u003e Value3, Key5 -\u003e Value5, Key1 -\u003e New Value1, Key4 -\u003e Value4)\n\nres124: scala.collection.immutable.Map[String,String] \u003d Map(Key1 -\u003e Value1, Key2 -\u003e Value2)\n\nupdatedImmutableMap: scala.collection.immutable.Map[String,String] \u003d Map(Key1 -\u003e Value1, Key2 -\u003e new Value2)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490927132728_-934824380",
+      "id": "20170331-112532_1665261729",
+      "dateCreated": "Mar 31, 2017 11:25:32 AM",
+      "dateStarted": "Mar 31, 2017 1:13:55 PM",
+      "dateFinished": "Mar 31, 2017 1:13:56 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n`immutable map`으로 새로운 맵을 계속 생성하면, 이전 맵과 새 맵은 대부분의 구조를 공유한다.(보기보다 비효율적이지 않다는 말)",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 1:15:21 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003e\u003ccode\u003eimmutable map\u003c/code\u003e으로 새로운 맵을 계속 생성하면, 이전 맵과 새 맵은 대부분의 구조를 공유한다.(보기보다 비효율적이지 않다는 말)\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490933603343_1547979933",
+      "id": "20170331-131323_1547340854",
+      "dateCreated": "Mar 31, 2017 1:13:23 PM",
+      "dateStarted": "Mar 31, 2017 1:15:21 PM",
+      "dateFinished": "Mar 31, 2017 1:15:21 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "4.4 Iterate Map",
+      "text": "for ((k, v) \u003c- immutableMap) println(k + \" : \" + v)\n\nfor (k \u003c- immutableMap.keySet) println(k)\nfor (v \u003c- immutableMap.values) println(v)\n\nfor ((k, v) \u003c- immutableMap) yield (v, k)",
+      "user": "anonymous",
+      "dateUpdated": "Mar 31, 2017 1:18:38 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Key1 : Value1\nKey2 : Value2\nKey1\nKey2\nValue1\nValue2\n\nres138: scala.collection.immutable.Map[String,String] \u003d Map(Value1 -\u003e Key1, Value2 -\u003e Key2)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490933605075_550726108",
+      "id": "20170331-131325_1063710813",
+      "dateCreated": "Mar 31, 2017 1:13:25 PM",
+      "dateStarted": "Mar 31, 2017 1:18:38 PM",
+      "dateFinished": "Mar 31, 2017 1:18:40 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "4.5 자바 연동",
+      "text": "%md\n* `java map -\u003e scala map` : 자바 메소드 호출로 자바 맵을 얻은 후, 스칼라 맵 API를 사용하기 위해 \n* `scala map -\u003e java map` : 스칼라가 제공하지 않는 `mutable` 트리맵을 사용하기 위해\n* 아래의 패키지를 임포트하면 묵시적 형변환이 가능\n    * `import scala.collection.JavaConversion.mapAsScalaMap`\n    * `import scala.collection.JavaConversion.mapAsJavaMap`",
+      "user": "anonymous",
+      "dateUpdated": "Apr 3, 2017 4:19:22 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003ejava map -\u0026gt; scala map\u003c/code\u003e : 자바 메소드 호출로 자바 맵을 얻은 후, 스칼라 맵 API를 사용하기 위해\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003escala map -\u0026gt; java map\u003c/code\u003e : 스칼라가 제공하지 않는 \u003ccode\u003emutable\u003c/code\u003e 트리맵을 사용하기 위해\u003c/li\u003e\n  \u003cli\u003e아래의 패키지를 임포트하면 묵시적 형변환이 가능\n    \u003cul\u003e\n      \u003cli\u003e\u003ccode\u003eimport scala.collection.JavaConversion.mapAsScalaMap\u003c/code\u003e\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003eimport scala.collection.JavaConversion.mapAsJavaMap\u003c/code\u003e\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1490933835775_-1004708071",
+      "id": "20170331-131715_1321378195",
+      "dateCreated": "Mar 31, 2017 1:17:15 PM",
+      "dateStarted": "Apr 3, 2017 4:10:26 PM",
+      "dateFinished": "Apr 3, 2017 4:10:26 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "4.6 Tuple",
+      "text": "val tuple \u003d (1, 3.14, \"hihi\")\n\ntuple._1\ntuple._2\ntuple._3\n\nvar tuple2: (Int, Double) \u003d (tuple._1, tuple._2)\nvar tuple3: (Int, Double, java.lang.String) \u003d tuple\n\n// pattern matching\nvar (e1, e2, _) \u003d tuple",
+      "user": "anonymous",
+      "dateUpdated": "Apr 3, 2017 4:19:25 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\ntuple: (Int, Double, String) \u003d (1,3.14,hihi)\n\nres172: Int \u003d 1\n\nres173: Double \u003d 3.14\n\nres174: String \u003d hihi\n\ntuple2: (Int, Double) \u003d (1,3.14)\n\ntuple3: (Int, Double, String) \u003d (1,3.14,hihi)\n\n\ne1: Int \u003d 1\ne2: Double \u003d 3.14\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491203201198_271938230",
+      "id": "20170403-160641_1790380839",
+      "dateCreated": "Apr 3, 2017 4:06:41 PM",
+      "dateStarted": "Apr 3, 2017 4:17:06 PM",
+      "dateFinished": "Apr 3, 2017 4:17:07 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1491203200775_-1044672506",
+      "id": "20170403-160640_694294372",
+      "dateCreated": "Apr 3, 2017 4:06:40 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala/Scala for the Impatient Chapter 4 Map \u0026 Tuple",
+  "id": "2CCWQ68PX",
+  "angularObjects": {
+    "2CDV3C51V:shared_process": [],
+    "2CEZYM8CH:shared_process": [],
+    "2CBXMD1K8:shared_process": [],
+    "2CC3ZFPQZ:shared_process": [],
+    "2CEK66QRE:shared_process": [],
+    "2CCS7GDUT:shared_process": [],
+    "2CECM2261:shared_process": [],
+    "2CE9811CW:shared_process": [],
+    "2CBDJU1VS:shared_process": [],
+    "2CE9PM1B6:shared_process": [],
+    "2CBBCX9GY:shared_process": [],
+    "2CCT8F56W:shared_process": [],
+    "2CE43Y351:shared_process": [],
+    "2CDK9A91X:shared_process": [],
+    "2CF85MNAE:shared_process": [],
+    "2CBBRV68Y:shared_process": [],
+    "2CBRCATP3:shared_process": [],
+    "2CERNGWGZ:shared_process": [],
+    "2CC288T2P:shared_process": [],
+    "2CD55NX64:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

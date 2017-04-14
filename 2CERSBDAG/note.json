@@ -1,0 +1,403 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# 5. Class\n## Key point\n1. 자동으로 게터/세터 생성\n2. 클라이언트 코드 변경없이 게터/세터 교체 가능( **단일 접근 원칙(Uniform Access Principle)** )\n3. 자바빈 `getXXX/setXXX`를 생성하려면 `@BeanProperty` 어노테이션 사용\n4. 기본 생성자의 인자는 클래스 필드, 바디는 클래스 바디\n5. 보조 생성자는 `this`",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 11:15:10 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003e5. Class\u003c/h1\u003e\n\u003ch2\u003eKey point\u003c/h2\u003e\n\u003col\u003e\n  \u003cli\u003e자동으로 게터/세터 생성\u003c/li\u003e\n  \u003cli\u003e클라이언트 코드 변경없이 게터/세터 교체 가능( \u003cstrong\u003e단일 접근 원칙(Uniform Access Principle)\u003c/strong\u003e )\u003c/li\u003e\n  \u003cli\u003e자바빈 \u003ccode\u003egetXXX/setXXX\u003c/code\u003e를 생성하려면 \u003ccode\u003e@BeanProperty\u003c/code\u003e 어노테이션 사용\u003c/li\u003e\n  \u003cli\u003e기본 생성자의 인자는 클래스 필드, 바디는 클래스 바디\u003c/li\u003e\n  \u003cli\u003e보조 생성자는 \u003ccode\u003ethis\u003c/code\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491444687214_-121286622",
+      "id": "20170406-111127_1643171089",
+      "dateCreated": "Apr 6, 2017 11:11:27 AM",
+      "dateStarted": "Apr 6, 2017 11:15:10 AM",
+      "dateFinished": "Apr 6, 2017 11:15:10 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.1 Simple Class",
+      "text": "%md\n```scala\nclass Counter {                 \n    private var value \u003d 0       \n    def increment() { value +\u003d 1 }\n    def current() \u003d value\n}\n\nval myCounter \u003d new Counter // or new Counter()\n\nmyCounter.increment()\nprintln(myCounter.current)\n```\n\n1. 스칼라에서 클래스는 `public` 선언되지 않음\n2. 소스파일은 여러 클래스를 가질 수 있고, 모두 `public visibility`\n3. 필드는 반드시 초기화\n4. 메소드는 default로 public\n5. 인자 없는 메소드는 `()` 없이 호출 가능 \n    * 컨벤션은 `mutator`는 사용 O, `accessor`는 사용 X\n    * `accessor` 정의에 `()`를 지워 강제할 수 있음\n    ```scala\n    // def current() \u003d value\n    def current \u003d value\n    ```",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 11:40:09 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Counter {                 \n    private var value \u003d 0       \n    def increment() { value +\u003d 1 }\n    def current() \u003d value\n}\n\nval myCounter \u003d new Counter // or new Counter()\n\nmyCounter.increment()\nprintln(myCounter.current)\n\u003c/code\u003e\u003c/pre\u003e\n\u003col\u003e\n  \u003cli\u003e스칼라에서 클래스는 \u003ccode\u003epublic\u003c/code\u003e 선언되지 않음\u003c/li\u003e\n  \u003cli\u003e소스파일은 여러 클래스를 가질 수 있고, 모두 \u003ccode\u003epublic visibility\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003e필드는 반드시 초기화\u003c/li\u003e\n  \u003cli\u003e메소드는 default로 public\u003c/li\u003e\n  \u003cli\u003e인자 없는 메소드는 \u003ccode\u003e()\u003c/code\u003e 없이 호출 가능\n    \u003cul\u003e\n      \u003cli\u003e컨벤션은 \u003ccode\u003emutator\u003c/code\u003e는 사용 O, \u003ccode\u003eaccessor\u003c/code\u003e는 사용 X\u003c/li\u003e\n      \u003cli\u003e\n      \u003cp\u003e\u003ccode\u003eaccessor\u003c/code\u003e 정의에 \u003ccode\u003e()\u003c/code\u003e를 지워 강제할 수 있음\u003c/p\u003e\n      \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003e// def current() \u003d value\ndef current \u003d value\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n\u003c/ol\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491444797114_-41137902",
+      "id": "20170406-111317_1704892650",
+      "dateCreated": "Apr 6, 2017 11:13:17 AM",
+      "dateStarted": "Apr 6, 2017 11:40:09 AM",
+      "dateFinished": "Apr 6, 2017 11:40:09 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.2 게터 세터 프로퍼티",
+      "text": "%md\n* 스칼라는 모든 필드에 대해 게터 세터를 생성한다.\n    ```scala\n    class Person {\n        var age \u003d 0\n    }\n    ```\n* 이는 다음과 같다\n    1. `private age` 필드 생성\n    2. 기본 `public` 게터/세터 생성  (`private`으로 정의했으면 `private` 게터/세터 생성)\n\n* 스칼라에서 게터/세터 메소드는 `프로퍼티명`, `프로퍼티명_\u003d`으로 오버라이딩 할 수 있다.\n\n    ```scala\n    class Person {\n        private var privateAge \u003d 0  // private field, and changed field name\n        \n        def age \u003d privateAge        // public getter\n        def age_\u003d(value: Int) { privateAge \u003d value }    // public setter\n    }\n    \n    person \u003d new Person\n    person.age \u003d 20     // set 20\n    println(person.age)     // get 20\n    ```\n* 위처럼 단일한 표기로 접근하는 **단일 접근 원칙** 을 충족시킨다.",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 4:45:20 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003e스칼라는 모든 필드에 대해 게터 세터를 생성한다.\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Person {\n    var age \u003d 0\n}\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e이는 다음과 같다\n    \u003col\u003e\n      \u003cli\u003e\u003ccode\u003eprivate age\u003c/code\u003e 필드 생성\u003c/li\u003e\n      \u003cli\u003e기본 \u003ccode\u003epublic\u003c/code\u003e 게터/세터 생성 (\u003ccode\u003eprivate\u003c/code\u003e으로 정의했으면 \u003ccode\u003eprivate\u003c/code\u003e 게터/세터 생성)\u003c/li\u003e\n    \u003c/ol\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e스칼라에서 게터/세터 메소드는 \u003ccode\u003e프로퍼티명\u003c/code\u003e, \u003ccode\u003e프로퍼티명_\u003d\u003c/code\u003e으로 오버라이딩 할 수 있다.\u003c/p\u003e\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Person {\n    private var privateAge \u003d 0  // private field, and changed field name\n\n    def age \u003d privateAge        // public getter\n    def age_\u003d(value: Int) { privateAge \u003d value }    // public setter\n}\n\nperson \u003d new Person\nperson.age \u003d 20     // set 20\nprintln(person.age)     // get 20\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e위처럼 단일한 표기로 접근하는 \u003cstrong\u003e단일 접근 원칙\u003c/strong\u003e 을 충족시킨다.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491445308597_-986733562",
+      "id": "20170406-112148_642367989",
+      "dateCreated": "Apr 6, 2017 11:21:48 AM",
+      "dateStarted": "Apr 6, 2017 4:45:20 PM",
+      "dateFinished": "Apr 6, 2017 4:45:20 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.3 게터만 있는 프로퍼티",
+      "text": "%md\n* 게터만 있는 읽기 전용 프로퍼티가 필요하면 `val` 필드를 사용\n* 클라이언트에서만 읽기 전용이고, 내부적으로 값 변경이 필요하면 `private var`를 사용(5.1의 `Counter` 클래스처럼)\n* 세터만 있는 프로퍼티는 없음",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 3:17:13 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false,
+        "lineNumbers": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e게터만 있는 읽기 전용 프로퍼티가 필요하면 \u003ccode\u003eval\u003c/code\u003e 필드를 사용\u003c/li\u003e\n  \u003cli\u003e클라이언트에서만 읽기 전용이고, 내부적으로 값 변경이 필요하면 \u003ccode\u003eprivate var\u003c/code\u003e를 사용(5.1의 \u003ccode\u003eCounter\u003c/code\u003e 클래스처럼)\u003c/li\u003e\n  \u003cli\u003e세터만 있는 프로퍼티는 없음\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491446413781_-1339181644",
+      "id": "20170406-114013_809883864",
+      "dateCreated": "Apr 6, 2017 11:40:13 AM",
+      "dateStarted": "Apr 6, 2017 3:17:13 PM",
+      "dateFinished": "Apr 6, 2017 3:17:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.4 오브젝트-비공개(Object private) 필드",
+      "text": "%md\n* 인스턴스는 같은 클래스인 다른 인스턴스의 `private` 필드에 접근할 수 있다.\n\n    ```scala\n    class Counter {\n        private var value \u003d 0\n        \n        def increment() { value +\u003d 1 }\n        def isLess(other: Counter) \u003d value \u003c other.value        // 다른 오브젝트의 private 필드 접근 가능\n    }\n    \n    var counter1, counter2 \u003d  new Counter\n    counter1.increment()\n    counter1.isLess(counter2)\n    ```\n* `private[this]`로 좀더 엄격한 접근 제한(오브젝트-비공개)을 허용\n    ```scala\n    class Counter {\n        private[this] var value \u003d 0 // 오브젝트 내에서만 접근가능(게터/세터가 생성되지 않음)\n    ```",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 10:00:20 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e인스턴스는 같은 클래스인 다른 인스턴스의 \u003ccode\u003eprivate\u003c/code\u003e 필드에 접근할 수 있다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Counter {\n    private var value \u003d 0\n\n    def increment() { value +\u003d 1 }\n    def isLess(other: Counter) \u003d value \u0026lt; other.value        // 다른 오브젝트의 private 필드 접근 가능\n}\n\nvar counter1, counter2 \u003d  new Counter\ncounter1.increment()\ncounter1.isLess(counter2)\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e\u003ccode\u003eprivate[this]\u003c/code\u003e로 좀더 엄격한 접근 제한(오브젝트-비공개)을 허용\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Counter {\n    private[this] var value \u003d 0 // 오브젝트 내에서만 접근가능(게터/세터가 생성되지 않음)\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491447113027_1887132164",
+      "id": "20170406-115153_1382903312",
+      "dateCreated": "Apr 6, 2017 11:51:53 AM",
+      "dateStarted": "Apr 6, 2017 4:46:57 PM",
+      "dateFinished": "Apr 6, 2017 4:46:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.5 빈 프로퍼티",
+      "text": "%md\n* 자바 빈(Bean)이란?\n    * 인자가 없는 하나의 생성자만 갖음\n    * 모든 필드는 `private`으로 정의되고, 각 필드는 `setXXX/getXXX` 형태의 세터/게터 존재\n    * `Serializable` 인터페이스 구현\n     \n\n    ```java\n    public class User implements java.io.Serializable {\n\n        // Properties.\n        private Long id;\n        private String name;\n        private Date birthdate;\n    \n        // Getters.\n        public Long getId() { return id; }\n        public String getName() { return name; }\n        public Date getBirthdate() { return birthdate; }\n    \n        // Setters.\n        public void setId(Long id) { this.id \u003d id; }\n        public void setName(String name) { this.name \u003d name; }\n        public void setBirthdate(Date birthdate) { this.birthdate \u003d birthdate; }\n    \n    }\n    ```\n\n* 다양한 자바 도구들이 이 규칙에 의존\n* 스칼라 필드에 `@BeanProperty` 어노테이션을 주어 그런 메소드들을 자동생성\n\n    ```scala\n    import scala.reflect.BeanProperty\n    \n    class Person {\n        @BeanProperty var name: String \u003d _\n    }\n    ```\n    \n* 이는 다음 4개 메소드를 생성\n    * `name: String`\n    * `name_\u003d(newValue: String): Unit`\n    * `getName(): String`\n    * `setName(newValue: String): Unit`",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 4:47:47 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e자바 빈(Bean)이란?\u003c/p\u003e\n    \u003cul\u003e\n      \u003cli\u003e인자가 없는 하나의 생성자만 갖음\u003c/li\u003e\n      \u003cli\u003e모든 필드는 \u003ccode\u003eprivate\u003c/code\u003e으로 정의되고, 각 필드는 \u003ccode\u003esetXXX/getXXX\u003c/code\u003e 형태의 세터/게터 존재\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003eSerializable\u003c/code\u003e 인터페이스 구현\u003c/li\u003e\n    \u003c/ul\u003e\n    \u003cpre\u003e\u003ccode class\u003d\"java\"\u003epublic class User implements java.io.Serializable {\n\n    // Properties.\n    private Long id;\n    private String name;\n    private Date birthdate;\n\n    // Getters.\n    public Long getId() { return id; }\n    public String getName() { return name; }\n    public Date getBirthdate() { return birthdate; }\n\n    // Setters.\n    public void setId(Long id) { this.id \u003d id; }\n    public void setName(String name) { this.name \u003d name; }\n    public void setBirthdate(Date birthdate) { this.birthdate \u003d birthdate; }\n\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e다양한 자바 도구들이 이 규칙에 의존\u003c/p\u003e\u003c/li\u003e\n  \u003cli\u003e스칼라 필드에 \u003ccode\u003e@BeanProperty\u003c/code\u003e 어노테이션을 주어 그런 메소드들을 자동생성\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eimport scala.reflect.BeanProperty\n\nclass Person {\n    @BeanProperty var name: String \u003d _\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e이는 다음 4개 메소드를 생성\u003c/p\u003e\n    \u003cul\u003e\n      \u003cli\u003e\u003ccode\u003ename: String\u003c/code\u003e\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003ename_\u003d(newValue: String): Unit\u003c/code\u003e\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003egetName(): String\u003c/code\u003e\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003esetName(newValue: String): Unit\u003c/code\u003e\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491462878472_-1547152284",
+      "id": "20170406-161438_319112818",
+      "dateCreated": "Apr 6, 2017 4:14:38 PM",
+      "dateStarted": "Apr 6, 2017 4:47:47 PM",
+      "dateFinished": "Apr 6, 2017 4:47:47 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.6 생성자",
+      "text": "%md\n* 스칼라는 주 생성자(`Primary Constructor`)와 보조 생성자(`Auxiliary Constructor`)가 존재\n* 주 생성자는 하나, 보조 생성자는 여러개",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 4:53:31 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e스칼라는 주 생성자(\u003ccode\u003ePrimary Constructor\u003c/code\u003e)와 보조 생성자(\u003ccode\u003eAuxiliary Constructor\u003c/code\u003e)가 존재\u003c/li\u003e\n  \u003cli\u003e주 생성자는 하나, 보조 생성자는 여러개\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491459519930_1096586351",
+      "id": "20170406-151839_1417405628",
+      "dateCreated": "Apr 6, 2017 3:18:39 PM",
+      "dateStarted": "Apr 6, 2017 4:53:31 PM",
+      "dateFinished": "Apr 6, 2017 4:53:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.6.1 보조 생성자(Auxiliary Constructor)",
+      "text": "%md\n* 자바와 유사하나 두 가지 차이점\n    * `this`로 정의 (클래스 이름 변경 시 편리)\n    * 반드시 이전에 정의한 보조 생성자 또는 기본 생성자 호출로 시작\n\n    ```scala\n    class Person {\n        private var name \u003d \"\"\n        private var age \u003d 0\n        \n        def this(name: String) {    // 보조 생성자\n            this()                  // 주 생성자 호출로 시작\n            this.name \u003d name     \n        }\n        \n        def this(name: String, age: Int) {  // 다른 보조 생성자\n            this(name)                      // 이전 정의된 보조 생성자 호출로 시작\n            this.age \u003d age\n        }\n    }\n    \n    val p1 \u003d new Person                 // 주 생성자\n    val p2 \u003d new Person(\"Park\")         // 보조 생성자 1\n    val p3 \u003d new Person(\"Park\", 29)     // 보조 생성자 2\n    ```\n    \n    ",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 4:59:37 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e자바와 유사하나 두 가지 차이점\n    \u003cul\u003e\n      \u003cli\u003e\u003ccode\u003ethis\u003c/code\u003e로 정의 (클래스 이름 변경 시 편리)\u003c/li\u003e\n      \u003cli\u003e반드시 이전에 정의한 보조 생성자 또는 기본 생성자 호출로 시작\u003c/li\u003e\n    \u003c/ul\u003e\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Person {\n    private var name \u003d \u0026quot;\u0026quot;\n    private var age \u003d 0\n\n    def this(name: String) {    // 보조 생성자\n        this()                  // 주 생성자 호출로 시작\n        this.name \u003d name     \n    }\n\n    def this(name: String, age: Int) {  // 다른 보조 생성자\n        this(name)                      // 이전 정의된 보조 생성자 호출로 시작\n        this.age \u003d age\n    }\n}\n\nval p1 \u003d new Person                 // 주 생성자\nval p2 \u003d new Person(\u0026quot;Park\u0026quot;)         // 보조 생성자 1\nval p3 \u003d new Person(\u0026quot;Park\u0026quot;, 29)     // 보조 생성자 2\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491459520129_809178922",
+      "id": "20170406-151840_1706689546",
+      "dateCreated": "Apr 6, 2017 3:18:40 PM",
+      "dateStarted": "Apr 6, 2017 4:59:37 PM",
+      "dateFinished": "Apr 6, 2017 4:59:37 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "5.6.2 주 생성자(Primary Constructor)",
+      "text": "%md\n* 모든 클래스는 주 생성자를 가짐\n* 클래스 인자로 생성자 인자 전달, 바디에 구현\n\n    ```scala\n    class Person(val name: String, val age: Int) {  // 클래스 인자로 주면 생성자 인자 \u0026 오브젝트 필드\n        // 기타 구현은 여기에\n        println(\"my name is \" + name + \" and i am \" + age)\n    }\n    ```\n* 자바와 비교\n\n    ```java\n    public class Person {\n        private String name;\n        private int age;\n        \n        public Person(String name, int age) {\n            this.name \u003d name;\n            this.age \u003d age;\n            println(\"my name is \" + this.name + \" and i am \" + this.age)\n        }\n        \n        public String name() { \n            return this.name; \n        }\n        \n        public int age() {\n            return this.age;\n        }\n    }\n    ```\n\n* default 파라메터 값을 사용해서 불필요한 보조 생성자를 없앤다\n    ```scala\n    class Person(val name: String \u003d \"park\", val age: Int \u003d 29) { }\n    ```\n\n* 주 생성자 인자의 `val` 또는 `var`를 사용하지 않는 경우\n    * 하나 이상의 메소드에서 사용되면 `private[this]`와 동일\n    * 아닌 경우 그냥 생성자에서 사용되는 파라메터\n\n* 헷갈린다면.. 그냥 보조 생성자를 써라!\n* 추가적으로, 주 생성자를 `private`으로 만드려면 다음과 같이..\n```scala\nclass Person private(val name: String) { ... }\n```",
+      "user": "anonymous",
+      "dateUpdated": "Apr 6, 2017 5:49:01 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e모든 클래스는 주 생성자를 가짐\u003c/li\u003e\n  \u003cli\u003e클래스 인자로 생성자 인자 전달, 바디에 구현\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Person(val name: String, val age: Int) {  // 클래스 인자로 주면 생성자 인자 \u0026amp; 오브젝트 필드\n    // 기타 구현은 여기에\n    println(\u0026quot;my name is \u0026quot; + name + \u0026quot; and i am \u0026quot; + age)\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e자바와 비교\n    \u003cpre\u003e\u003ccode class\u003d\"java\"\u003epublic class Person {\n    private String name;\n    private int age;\n\n    public Person(String name, int age) {\n        this.name \u003d name;\n        this.age \u003d age;\n        println(\u0026quot;my name is \u0026quot; + this.name + \u0026quot; and i am \u0026quot; + this.age)\n    }\n\n    public String name() { \n        return this.name; \n    }\n\n    public int age() {\n        return this.age;\n    }\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003edefault 파라메터 값을 사용해서 불필요한 보조 생성자를 없앤다\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Person(val name: String \u003d \u0026quot;park\u0026quot;, val age: Int \u003d 29) { }\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e주 생성자 인자의 \u003ccode\u003eval\u003c/code\u003e 또는 \u003ccode\u003evar\u003c/code\u003e를 사용하지 않는 경우\u003c/p\u003e\n    \u003cul\u003e\n      \u003cli\u003e하나 이상의 메소드에서 사용되면 \u003ccode\u003eprivate[this]\u003c/code\u003e와 동일\u003c/li\u003e\n      \u003cli\u003e아닌 경우 그냥 생성자에서 사용되는 파라메터\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e헷갈린다면.. 그냥 보조 생성자를 써라!\u003c/p\u003e\u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e추가적으로, 주 생성자를 \u003ccode\u003eprivate\u003c/code\u003e으로 만드려면 다음과 같이..\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Person private(val name: String) { ... }\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1491459520315_849962306",
+      "id": "20170406-151840_947669676",
+      "dateCreated": "Apr 6, 2017 3:18:40 PM",
+      "dateStarted": "Apr 6, 2017 5:49:01 PM",
+      "dateFinished": "Apr 6, 2017 5:49:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1491466577595_-2088023347",
+      "id": "20170406-171617_653850176",
+      "dateCreated": "Apr 6, 2017 5:16:17 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala/Scala for the Impatient Chapter 5 Class",
+  "id": "2CERSBDAG",
+  "angularObjects": {
+    "2CDV3C51V:shared_process": [],
+    "2CEZYM8CH:shared_process": [],
+    "2CBXMD1K8:shared_process": [],
+    "2CC3ZFPQZ:shared_process": [],
+    "2CEK66QRE:shared_process": [],
+    "2CCS7GDUT:shared_process": [],
+    "2CECM2261:shared_process": [],
+    "2CE9811CW:shared_process": [],
+    "2CBDJU1VS:shared_process": [],
+    "2CE9PM1B6:shared_process": [],
+    "2CBBCX9GY:shared_process": [],
+    "2CCT8F56W:shared_process": [],
+    "2CE43Y351:shared_process": [],
+    "2CDK9A91X:shared_process": [],
+    "2CF85MNAE:shared_process": [],
+    "2CBBRV68Y:shared_process": [],
+    "2CBRCATP3:shared_process": [],
+    "2CERNGWGZ:shared_process": [],
+    "2CC288T2P:shared_process": [],
+    "2CD55NX64:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

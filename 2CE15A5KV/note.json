@@ -1,0 +1,319 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# 6. Object\n## Keypoint\n* `Singleton`과 유틸리티 메소드를 위해 오브젝트 사용\n* 클래스는 같은 이름을 가진 `컴패니언 오브젝트`를 가질 수 있다.\n* 오브젝트는 클래스나 트레이트를 `extend` 할 수 있다.\n* 오브젝트의 `apply()` 메소드는 컴패니언 클래스의 인스턴스 생성에 사용\n* `main()` 메소드 대신 `App` 트레이트를 extend하는 오브젝트 사용\n* `Enumeration` 오브젝트를 extend하여 `enum` 타입 구현 가능",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:19:06 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003e6. Object\u003c/h1\u003e\n\u003ch2\u003eKeypoint\u003c/h2\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003eSingleton\u003c/code\u003e과 유틸리티 메소드를 위해 오브젝트 사용\u003c/li\u003e\n  \u003cli\u003e클래스는 같은 이름을 가진 \u003ccode\u003e컴패니언 오브젝트\u003c/code\u003e를 가질 수 있다.\u003c/li\u003e\n  \u003cli\u003e오브젝트는 클래스나 트레이트를 \u003ccode\u003eextend\u003c/code\u003e 할 수 있다.\u003c/li\u003e\n  \u003cli\u003e오브젝트의 \u003ccode\u003eapply()\u003c/code\u003e 메소드는 컴패니언 클래스의 인스턴스 생성에 사용\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003emain()\u003c/code\u003e 메소드 대신 \u003ccode\u003eApp\u003c/code\u003e 트레이트를 extend하는 오브젝트 사용\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eEnumeration\u003c/code\u003e 오브젝트를 extend하여 \u003ccode\u003eenum\u003c/code\u003e 타입 구현 가능\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492134818359_1832267982",
+      "id": "20170414-105338_244646444",
+      "dateCreated": "Apr 14, 2017 10:53:38 AM",
+      "dateStarted": "Apr 14, 2017 2:19:06 PM",
+      "dateFinished": "Apr 14, 2017 2:19:06 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "6.1 Singleton",
+      "text": "%md\n* ex)\n    ```scala\n    object Accounts {\n        private var lastNumber \u003d 0\n        def newUniqueNumber() \u003d { lastNumber +\u003d 1; lastNumber }\n    }\n    ```\n* 계정의 고유 번호가 필요할 때 `Accounts.newUniqueNumber()` 호출\n* 오브젝트 생성자는 오브젝트가 처음 호출될 때 실행 (오브젝트가 사용되지 않으면 생성자도 실행되지 않는다.)\n* 클래스의 모든 기능을 가질 수 있다.\n    * 클래스나 트레이트 확장도 가능\n    * 유일하게 지원하지 않는 것은 생성자 인자를 줄 수 없다는 것\n* 자바 등 언어에서 싱글톤을 사용한 상황에서 스칼라에서는 오브젝트를 사용\n    * 유틸리티 메소드 또는 상수를 관리\n    * 하나의 `immutable` 인스턴스를 효율적으로 공유",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:25:31 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n  \u003cp\u003eex)\u003c/p\u003e\n  \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eobject Accounts {\n    private var lastNumber \u003d 0\n    def newUniqueNumber() \u003d { lastNumber +\u003d 1; lastNumber }\n}\n\u003c/code\u003e\u003c/pre\u003e\u003c/li\u003e\n  \u003cli\u003e계정의 고유 번호가 필요할 때 \u003ccode\u003eAccounts.newUniqueNumber()\u003c/code\u003e 호출\u003c/li\u003e\n  \u003cli\u003e오브젝트 생성자는 오브젝트가 처음 호출될 때 실행 (오브젝트가 사용되지 않으면 생성자도 실행되지 않는다.)\u003c/li\u003e\n  \u003cli\u003e클래스의 모든 기능을 가질 수 있다.\n    \u003cul\u003e\n      \u003cli\u003e클래스나 트레이트 확장도 가능\u003c/li\u003e\n      \u003cli\u003e유일하게 지원하지 않는 것은 생성자 인자를 줄 수 없다는 것\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n  \u003cli\u003e자바 등 언어에서 싱글톤을 사용한 상황에서 스칼라에서는 오브젝트를 사용\n    \u003cul\u003e\n      \u003cli\u003e유틸리티 메소드 또는 상수를 관리\u003c/li\u003e\n      \u003cli\u003e하나의 \u003ccode\u003eimmutable\u003c/code\u003e 인스턴스를 효율적으로 공유\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492135149800_-1017291286",
+      "id": "20170414-105909_441873336",
+      "dateCreated": "Apr 14, 2017 10:59:09 AM",
+      "dateStarted": "Apr 14, 2017 2:25:31 PM",
+      "dateFinished": "Apr 14, 2017 2:25:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "6.2 Companion object",
+      "text": "%md\n* 자바 등의 언어에서는 클래스가 인스턴스 메소드와 정적 메소드를 모두 갖는다.\n* 스칼라에서는 클래스와 같은 이름을 가진 **컴패니언 오브젝트**를 사용한다.\n\n    ```scala\n    class Account {\n        val id \u003d Account.newUniqueNumber()  // Companion object method\n        private var balance \u003d 0.0\n        def deposit(amount: Double) { balance +\u003d amount }\n    }\n    \n    object Account {    // Companion object\n        private var lastNumber \u003d 0\n        private def newUniqueNumber() \u003d { lastNumber +\u003d 1; lastNumber }\n    }\n    ```\n\n* 서로의 `private` 기능에 접근 가능\n* 반드시 같은 소스파일 내의 존재해야한다.",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:22:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e자바 등의 언어에서는 클래스가 인스턴스 메소드와 정적 메소드를 모두 갖는다.\u003c/li\u003e\n  \u003cli\u003e스칼라에서는 클래스와 같은 이름을 가진 \u003cstrong\u003e컴패니언 오브젝트\u003c/strong\u003e를 사용한다.\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eclass Account {\n    val id \u003d Account.newUniqueNumber()  // Companion object method\n    private var balance \u003d 0.0\n    def deposit(amount: Double) { balance +\u003d amount }\n}\n\nobject Account {    // Companion object\n    private var lastNumber \u003d 0\n    private def newUniqueNumber() \u003d { lastNumber +\u003d 1; lastNumber }\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n  \u003cp\u003e서로의 \u003ccode\u003eprivate\u003c/code\u003e 기능에 접근 가능\u003c/p\u003e\u003c/li\u003e\n  \u003cli\u003e반드시 같은 소스파일 내의 존재해야한다.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492135209180_1951871815",
+      "id": "20170414-110009_730561981",
+      "dateCreated": "Apr 14, 2017 11:00:09 AM",
+      "dateStarted": "Apr 14, 2017 2:22:43 PM",
+      "dateFinished": "Apr 14, 2017 2:22:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "6.3 Apply method",
+      "text": "%md\n* 오브젝트는 `apply()` 메소드를 갖는다.\n* 주로 컴패니언 클래스의 오브젝트 신규 인스턴스를 리턴\n* `new` 키워드 없이 인스턴스를 생성할 수 있어, 문법 간결",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:35:06 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e오브젝트는 \u003ccode\u003eapply()\u003c/code\u003e 메소드를 갖는다.\u003c/li\u003e\n  \u003cli\u003e주로 컴패니언 클래스의 오브젝트 신규 인스턴스를 리턴\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003enew\u003c/code\u003e 키워드 없이 인스턴스를 생성할 수 있어, 문법 간결\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492135210692_1357819514",
+      "id": "20170414-110010_2109684787",
+      "dateCreated": "Apr 14, 2017 11:00:10 AM",
+      "dateStarted": "Apr 14, 2017 2:35:06 PM",
+      "dateFinished": "Apr 14, 2017 2:35:06 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var arr1 \u003d Array(100)       // apply(100)\nvar arr2 \u003d new Array(100)   // constructor",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:35:44 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\narr1: Array[Int] \u003d Array(100)\n\narr2: Array[Nothing] \u003d Array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492147415919_-1733228106",
+      "id": "20170414-142335_1443954044",
+      "dateCreated": "Apr 14, 2017 2:23:35 PM",
+      "dateStarted": "Apr 14, 2017 2:35:44 PM",
+      "dateFinished": "Apr 14, 2017 2:35:45 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "6.4 Application object",
+      "text": "%md\n* 스칼라는 `Array[String] \u003d\u003e Unit` 타입의 오브젝트 `main` 메소드로 실행\n\n    ```scala\n    object Hello {\n        def main(args: Array[String]) {\n            println(\"Hello, \" + args(0))\n        }\n    }\n    ```\n\n* 하는 대신에 `App` 트레이트를 `extend` 할 수 있다.\n\n    ```scala\n    object Hello extends App {\n        println(\"Hello, + \" args(0))\n    }\n    ```",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:41:03 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e\n    \u003cp\u003e스칼라는 \u003ccode\u003eArray[String] \u003d\u0026gt; Unit\u003c/code\u003e 타입의 오브젝트 \u003ccode\u003emain\u003c/code\u003e 메소드로 실행\u003c/p\u003e\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eobject Hello {\n    def main(args: Array[String]) {\n        println(\u0026quot;Hello, \u0026quot; + args(0))\n    }\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\n    \u003cp\u003e하는 대신에 \u003ccode\u003eApp\u003c/code\u003e 트레이트를 \u003ccode\u003eextend\u003c/code\u003e 할 수 있다.\u003c/p\u003e\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eobject Hello extends App {\n    println(\u0026quot;Hello, + \u0026quot; args(0))\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492135210876_1397833399",
+      "id": "20170414-110010_877266660",
+      "dateCreated": "Apr 14, 2017 11:00:10 AM",
+      "dateStarted": "Apr 14, 2017 2:41:03 PM",
+      "dateFinished": "Apr 14, 2017 2:41:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "6.5 Enumeration",
+      "text": "%md\n* 스칼라는 `enum` 타입이 없는 대신 Helper class인 `Enumeration`을 제공\n\n    ```scala\n    object Color extends Enumeration {\n        val Red, Yellow, Green \u003d Value      // Value 클래스의 인스턴스를 리턴\n\n        /* 동일한 코드\n        val Red \u003d Value\n        val Yellow \u003d Value\n        val Green \u003d Value\n        */\n    }\n    \n    var someColor \u003d Color.Red\n    ```\n* `Id`, `Name`을 지정가능\n\n    ```scala\n    object Color extends Enumeration {\n        val Red \u003d Value(0, \"stop\")\n        val Yellow \u003d Value(1, \"ready\")\n        val Green \u003d Value(2, \"go\")\n    }\n    ```",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:47:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "title": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cul\u003e\n  \u003cli\u003e스칼라는 \u003ccode\u003eenum\u003c/code\u003e 타입이 없는 대신 Helper class인 \u003ccode\u003eEnumeration\u003c/code\u003e을 제공\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eobject Color extends Enumeration {\n    val Red, Yellow, Green \u003d Value      // Value 클래스의 인스턴스를 리턴\n\n    /* 동일한 코드\n    val Red \u003d Value\n    val Yellow \u003d Value\n    val Green \u003d Value\n    */\n}\n\nvar someColor \u003d Color.Red\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eId\u003c/code\u003e, \u003ccode\u003eName\u003c/code\u003e을 지정가능\n    \u003cpre\u003e\u003ccode class\u003d\"scala\"\u003eobject Color extends Enumeration {\n    val Red \u003d Value(0, \u0026quot;stop\u0026quot;)\n    val Yellow \u003d Value(1, \u0026quot;ready\u0026quot;)\n    val Green \u003d Value(2, \u0026quot;go\u0026quot;)\n}\n\u003c/code\u003e\u003c/pre\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1492148405282_-1377514330",
+      "id": "20170414-144005_1384224459",
+      "dateCreated": "Apr 14, 2017 2:40:05 PM",
+      "dateStarted": "Apr 14, 2017 2:47:28 PM",
+      "dateFinished": "Apr 14, 2017 2:47:28 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "Apr 14, 2017 2:44:15 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1492148655643_-50178242",
+      "id": "20170414-144415_1533216608",
+      "dateCreated": "Apr 14, 2017 2:44:15 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala/Scala for the Impatient Chapter 6 Object",
+  "id": "2CE15A5KV",
+  "angularObjects": {
+    "2CDV3C51V:shared_process": [],
+    "2CEZYM8CH:shared_process": [],
+    "2CBXMD1K8:shared_process": [],
+    "2CC3ZFPQZ:shared_process": [],
+    "2CEK66QRE:shared_process": [],
+    "2CCS7GDUT:shared_process": [],
+    "2CECM2261:shared_process": [],
+    "2CE9811CW:shared_process": [],
+    "2CBDJU1VS:shared_process": [],
+    "2CE9PM1B6:shared_process": [],
+    "2CBBCX9GY:shared_process": [],
+    "2CCT8F56W:shared_process": [],
+    "2CE43Y351:shared_process": [],
+    "2CDK9A91X:shared_process": [],
+    "2CF85MNAE:shared_process": [],
+    "2CBBRV68Y:shared_process": [],
+    "2CBRCATP3:shared_process": [],
+    "2CERNGWGZ:shared_process": [],
+    "2CC288T2P:shared_process": [],
+    "2CD55NX64:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
